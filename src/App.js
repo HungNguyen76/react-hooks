@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import CssModule from './components';
+import CSS from './hooks/css';
+import Memo from './hooks/memo';
+import UseContext2 from './hooks/store/useContext2';
+import TodoApp from './hooks/Todo';
+import ToDoList from './hooks/toDoList';
+import TwoWayBinding from './hooks/twoway-binding';
+import UseCallback from './hooks/useCallback';
+import UseImperativeHandle from './hooks/useImperativeHandle';
+// import UseContext from './hooks/useContext';
+// import UseEffects from './hooks/useEffects';
+import UseLayoutEffect from './hooks/useLayoutEffect';
+import UseMemo from './hooks/useMemo';
+import UseReducer from './hooks/useReducer';
+import UseRef from './hooks/useRef';
+import UseStates from './hooks/useStates';
+import ReactRouter from './pages';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ReactRouter /> <hr />
+      <CssModule /> <hr />
+      <CSS /> <hr />
+      <UseImperativeHandle /> <hr />
+      <UseContext2 /> <hr />
+      {/* <UseContext /><hr /> */}
+      <TodoApp /><hr />
+      <UseStates /><hr />
+      <TwoWayBinding /><hr />
+      <ToDoList /><hr />
+      {/* <UseEffects /> */}
+      <UseLayoutEffect /><hr />
+      <UseRef /><hr />
+      <Memo /><hr />
+      <UseCallback /><hr />
+      <UseMemo /><hr />
+      <UseReducer /><hr />
     </div>
   );
 }
