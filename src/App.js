@@ -16,10 +16,14 @@ import UseReducer from './hooks/useReducer';
 import UseRef from './hooks/useRef';
 import UseStates from './hooks/useStates';
 import ReactRouter from './pages';
+import EnhancedObjectLiterals from './es6/enhancedObjectLiteral';
+import SpreadOperator from './es6/spreadOperator';
 
 function App() {
   return (
     <div className="App">
+      <EnhancedObjectLiterals /> <hr />
+      <SpreadOperator /> <hr />
       <ReactRouter /> <hr />
       <CssModule /> <hr />
       <CSS /> <hr />
