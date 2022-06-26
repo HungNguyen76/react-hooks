@@ -9,7 +9,7 @@ import TwoWayBinding from './hooks/twoway-binding';
 import UseCallback from './hooks/useCallback';
 import UseImperativeHandle from './hooks/useImperativeHandle';
 // import UseContext from './hooks/useContext';
-// import UseEffects from './hooks/useEffects';
+import UseEffects from './hooks/useEffects';
 import UseLayoutEffect from './hooks/useLayoutEffect';
 import UseMemo from './hooks/useMemo';
 import UseReducer from './hooks/useReducer';
@@ -30,7 +30,7 @@ function App() {
       <UseStates /><hr />
       <TwoWayBinding /><hr />
       <ToDoList /><hr />
-      {/* <UseEffects /> */}
+      <UseEffects />
       <UseLayoutEffect /><hr />
       <UseRef /><hr />
       <Memo /><hr />

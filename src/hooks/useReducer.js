@@ -14,15 +14,15 @@ import { useReducer} from 'react'
 const initState = 0
 
 //Actions
-const UP_ACTION = 'up'
-const DOWN_ACTION = 'down'
+const UP_ACTION = 'UP'
+const DOWN_ACTION = 'DOWN'
 
 //Reducer
 const reducer = (state, action) => {
     switch(action) {
-        case UP_ACTION: 
+        case 'UP': 
             return state + 1
-        case DOWN_ACTION: 
+        case 'DOWN': 
             return state - 1
         default: 
             throw new Error('Invalid action')

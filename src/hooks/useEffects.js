@@ -1,13 +1,23 @@
 import {useState, useEffect} from 'react';
 
+// Kiến thức cần học trước khi học useEffect
 // Side Effect
+// Observer pattern: Subscribe / unsubscribe
+// Events: Add/ remove event listeners
+// Closure
+// Timers: setInterval, setTimeout, clearInterval, clearTimeout
+// useState
+// Mounted/ unmounted
+//Call API
 
-/*  Update DOM
-    Call API
-    Listen DOM events 
+/*  useEffect thường dùng để:
+    1.Update DOM
+    - F8 blog title
+    2.Call API
+    3.Listen DOM events 
         - Scroll 
-        -Resize
-    Cleanup
+        - Resize
+    4.Cleanup
         -Remove listenter / unsubscribe
         -clear timer
 
@@ -30,7 +40,7 @@ const UseEffects = () => {
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${type}`)
-            .then(res => res.json())
+            .then(res => res.json()) //trả về promise của res.json (object được convert sang javascript)
             .then(posts => {
                 setPosts(posts)
             }, [type])
@@ -54,7 +64,7 @@ const UseEffects = () => {
             ))}
             <input value={title} onChange={e => setTitle(e.target.value)} />
             <ul>
-                {posts.map(post=> <li key={post.id}>{post.title}</li>)}
+                {posts.map(post=> <li key={post.id}>{post.title ? post.title : post.name}</li>)}
             </ul>
         </div>
     )
