@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-// import { ThemeProvider } from './hooks/ThemeContext';
 import App from './App'
 import { StoreProvider } from './hooks/store';
 
@@ -14,11 +13,7 @@ root.render(
       <StoreProvider> 
         <App />
       </StoreProvider>
-    </Router>
-    {/* <ThemeProvider>
-      <App /> 
-    </ThemeProvider> */}
- 
+    </Router> 
   </React.StrictMode>
 );
 

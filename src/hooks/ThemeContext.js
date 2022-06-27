@@ -1,20 +1,31 @@
 import {useState, createContext} from 'react'
+import Content from './Content/Content'
 
-const ThemeContext = createContext()
+//Context
+//CompA => CompB => CompC
 
-function ThemeProvider({children}) {
+//Theme: Dark / Light
+
+//1. Create context
+//2. Provider
+//3. Consumer
+
+export const ThemeContext = createContext()
+
+function ThemeProvider() {
     const [theme, setTheme ] = useState('dark')
     const toggleTheme = () => {
         setTheme(theme === 'dark' ? 'light' : 'dark')
     }
-    const value = {
-        theme,
-        toggleTheme
-    }
+    
     return (
-        <ThemeContext.Provider value={value}>
-            {children}
+        <ThemeContext.Provider value={theme}>
+            <h2>useContext</h2>
+            <div style={{padding: 20}}>
+                <button onClick={toggleTheme}>Toggle</button>
+                <Content />
+            </div>
         </ThemeContext.Provider>
     )
 }
-export {ThemeContext, ThemeProvider}
+export default ThemeProvider

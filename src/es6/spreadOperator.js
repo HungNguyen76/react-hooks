@@ -9,7 +9,7 @@ const SpreadOperator = () => {
     function logger2({name, price, ...rest}) {
         console.log(name) // Javascript
         console.log(price) //1000
-        console.log(rest) //{description: "Description content"} : object
+        console.log(rest) //{description: "Description content"}
     }
     logger2 ({
         name: 'Javascript',
@@ -28,7 +28,7 @@ const SpreadOperator = () => {
     var array1 = ['Javascrip', 'Ruby' , 'PHP']
     var array2 = ['ReactJs', 'Dart']
     var array3 = [...array2, ...array1]
-    console.log(array3) // ['ReactJs', 'Dart', 'Javascrip', 'Ruby' , 'PHP']
+    console.log(array3) // ['ReactJs', 'Dart', 'Javascript', 'Ruby' , 'PHP']
     
     var object1 = {
         name: 'Golang'

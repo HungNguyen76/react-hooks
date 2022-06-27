@@ -1,9 +1,11 @@
 import { memo } from 'react';
+import Paragraph from './paragraph/paragraph';
 
-function Content({count}) {
-    // console.log ('re-render')
+function Content() {
     return (
-        <h2>HELLO ANH EM F8 {count}</h2>
+        <div>
+            <Paragraph />
+        </div>
     )
 }
 export default memo(Content) //chỉ render khi nào props truyền vào Content thay đổi

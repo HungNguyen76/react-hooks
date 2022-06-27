@@ -7,7 +7,8 @@ function Provider({children}) {
     const [state, dispatch] = useReducer(logger(reducer), initState)
 
     return (
-        <Context.Provider value={[state, dispatch]}>
+        // truyền mảng state và dispatch xuống tất cả component con thông qua {children}
+        <Context.Provider value={[state, dispatch]}> 
             {children}
         </Context.Provider>
     )

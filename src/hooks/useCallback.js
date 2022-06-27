@@ -2,9 +2,15 @@ import {useState, useCallback} from 'react'
 import Content2 from './Content/Content2'
 
 //2. useCallback() : tránh tạo ra hàm mới ko cần thiết trong function component 
-    //- Reference types
-    // mỗi lần tạo hàm mới, nó sẽ lưu hàm này vào bộ nhớ rồi trả ra tham chiếu 
-    // mỗi lần tạo hàm mới, nó sẽ lưu 1 tham chiếu mới
+    //- Reference types: trong khoá JS nâng cao với toán tử ===, sẽ so sánh dựa trên tham chiếu
+    //- useCallback mỗi lần tạo hàm mới, callback sẽ lưu hàm này vào bộ nhớ rồi trả ra tham chiếu mới dựa trên deps
+    //- nếu [] không có deps, callback luôn trả về tham chiếu cũ dẫn đến không re-render lại hàm logic trong đó
+    //- nếu có [deps] sau khi tính toán lại, callback sẽ trả về tham chiếu mới và re-render lại component
+    //- props truyền vào component con có thể là object, function, array
+    
+    //- Note: nếu đã sử dụng React memo để tránh component con re-render không cần thiết
+    // thì bên component cha, những function phải sử dụng useCallback hết
+    // còn nếu không dùng React memo() cho component con thì ko cần xài useCallback 
     //- React memo()
 
 
